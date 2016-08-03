@@ -16,7 +16,7 @@ You can change that folder as needed, but make sure you update the "-v" mounts f
 3.) [ *OPTIONAL* ] set environment variable "UDPLOGHOST" or "TCPLOGHOST", if defined rsyslog will be started with remote SYSLOG logging to these hosts. If you use remote syslog, then it might be useful to set the hostname of the container depending on your server syslog configuration (the logs on the syslog server might get stored based on the hostname of the client)
 
 
-## Run mysql
+## Run dhcp
 
 ```
 docker run --name=dhcpserver --hostname=dhcpserver --rm -p 67:67/udp -e UDPLOGHOST=192.168.0.17  -v /dhcp/var/lib/dhcp:/var/lib/dhcp  -v /dhcp/etc/dhcp:/etc/dhcp qindel/dhcp-syslog
